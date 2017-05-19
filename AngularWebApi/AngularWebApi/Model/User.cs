@@ -38,7 +38,7 @@ namespace AngularWebApi.Model
         public string Description { get; set; }
         public int categoryId { get; set; }
         public int UserId { get; set; }
-        public string planmonthdate { get; set; }
+        public DateTime? planmonthdate { get; set; }
         public bool IsConfirm { get; set; }
         public bool IsActive { get; set; }
         public string Comment { get; set; }
