@@ -112,7 +112,63 @@ namespace AngularWebApi.Controllers
                 }
             }
             return response;
-        } 
+        }
+
+
+
+        //for next month plan
+        [HttpGet]
+        public List<LeadUserDetail> getLeadsPlanMonth(int month)
+        {
+
+            var listLeadCategory = TestData.GetLeadCategoryForNextMonth().Where(n => n.planmonthdate != null && n.planmonthdate.Value.Month == month && n.IsConfirm != true).ToList();
+            return listLeadCategory;
+        }
+
+
+        [HttpGet]
+        public List<LeadUserDetail> addToConfirmedLeads(int categoryId, int leadId, int month)
+        {
+            var listLeadCategory = ApiData.LeadsUserDetail.Where(n => n.categoryId == categoryId && n.id == leadId && n.planmonthdate != null && n.planmonthdate.Value.Month == month && n.IsConfirm == false).ToList();
+
+            foreach (var item in listLeadCategory)
+            {
+                item.IsConfirm = true;
+            }
+
+            return getLeadsPlanMonth(month);
+
+        }
+
+        [HttpGet]
+        public string leadConfirmComment(int categoryId, int leadId, int month, string comment)
+        {
+            var listLeadCategory = ApiData.LeadsUserDetail.Where(n => n.categoryId == categoryId && n.id == leadId && n.planmonthdate != null && n.planmonthdate.Value.Month == month && n.IsConfirm == false).ToList();
+
+            foreach (var item in listLeadCategory)
+            {
+                item.Comment = comment;
+            }
+
+            return "done";
+
+        }
+
+
+        [HttpGet]
+        public List<LeadUserDetail> removeLeadsPlanMonth(int categoryId, int leadId, int month)
+        {
+
+            var listLeadCategory = ApiData.LeadsUserDetail.Where(n => n.categoryId == categoryId && n.id == leadId && n.planmonthdate != null && n.planmonthdate.Value.Month == month && n.IsConfirm == false).ToList();
+
+            foreach (var item in listLeadCategory)
+            {
+                item.planmonthdate = null;
+            }
+
+            return getLeadsPlanMonth(month);
+        }
+        //ENDS HERE
     }
 
 

@@ -42,6 +42,9 @@ namespace AngularWebApi.Model
         public bool IsConfirm { get; set; }
         public bool IsActive { get; set; }
         public string Comment { get; set; }
+        public LeadCategory LeadCategory { get; set; }
+        public bool IsPlanMonth { get; set; }
+
     }
 
     public class TestData
@@ -236,6 +239,149 @@ namespace AngularWebApi.Model
             ApiData.LeadsUserDetail = listUserCategory;
 
             return listUserCategory;
+        }
+
+        public static List<LeadUserDetail> GetLeadCategoryForNextMonth()
+        {
+            if (ApiData.LeadsUserDetail != null)
+            {
+                return ApiData.LeadsUserDetail;
+            }
+            List<LeadUserDetail> listCategory = new List<LeadUserDetail>();
+            LeadCategory cat1 = new LeadCategory
+            {
+                categoryid = 1001,
+                categoryname = "Category 1",
+                isloading = true,
+
+            };
+            LeadCategory cat2 = new LeadCategory
+            {
+                categoryid = 1002,
+                categoryname = "Category 2",
+                isloading = true
+            };
+            LeadCategory cat3 = new LeadCategory
+            {
+                categoryid = 1003,
+                categoryname = "Category 3",
+                isloading = true
+            };
+            LeadCategory cat4 = new LeadCategory
+            {
+                categoryid = 1004,
+                categoryname = "Category 4",
+                isloading = true
+            };
+
+            LeadUserDetail catLeadUser1 = new LeadUserDetail
+            {
+                id = 1,
+                categoryId = 1001,
+                UserId = 1,
+                leadname = "facebook app",
+                Description = "facebook app detail",
+                planmonthdate = DateTime.Parse("2017-01-18"),
+                IsPlanMonth = true,
+                LeadCategory = cat1
+
+            };
+            LeadUserDetail catLeadUser2 = new LeadUserDetail
+            {
+                id = 2,
+                categoryId = 1001,
+                UserId = 1,
+                leadname = "test app",
+                Description = "test app detail",
+                planmonthdate = DateTime.Parse("2017-02-18"),
+                IsPlanMonth = true,
+                LeadCategory = cat1
+            };
+            LeadUserDetail catLeadUser3 = new LeadUserDetail
+            {
+                id = 3,
+                categoryId = 1002,
+                UserId = 1,
+                leadname = "google app",
+                Description = "google app detail",
+                planmonthdate = DateTime.Parse("2017-02-19"),
+                IsPlanMonth = false,
+                LeadCategory = cat2
+
+            };
+            LeadUserDetail catLeadUser4 = new LeadUserDetail
+            {
+                id = 4,
+                categoryId = 1003,
+                UserId = 1,
+                leadname = "span app",
+                Description = "span app detail",
+                planmonthdate = DateTime.Parse("2017-03-20"),
+                IsPlanMonth = true,
+                LeadCategory = cat3
+
+            };
+            LeadUserDetail catLeadUser5 = new LeadUserDetail
+            {
+                id = 5,
+                categoryId = 1003,
+                UserId = 1,
+                leadname = "evry app",
+                Description = "evry app detail",
+                planmonthdate = DateTime.Parse("2017-3-10"),
+                IsPlanMonth = true,
+                LeadCategory = cat3
+
+            };
+            LeadUserDetail catLeadUser6 = new LeadUserDetail
+            {
+                id = 6,
+                categoryId = 1004,
+                UserId = 1,
+                leadname = "yahoo app",
+                Description = "yahoo app detail",
+                planmonthdate = DateTime.Parse("2017-04-09"),
+                IsPlanMonth = false,
+                LeadCategory = cat4
+
+            };
+            LeadUserDetail catLeadUser7 = new LeadUserDetail
+            {
+                id = 7,
+                categoryId = 1001,
+                UserId = 1,
+                leadname = "AMS APP",
+                Description = "yahoo app detail",
+                planmonthdate = DateTime.Parse("2017-01-09"),
+                IsPlanMonth = false,
+                LeadCategory = cat1
+
+            };
+            LeadUserDetail catLeadUser8 = new LeadUserDetail
+            {
+                id = 8,
+                categoryId = 1001,
+                UserId = 1,
+                leadname = "APEX APP",
+                Description = "yahoo app detail",
+                planmonthdate = DateTime.Parse("2017-01-09"),
+                IsPlanMonth = false,
+                LeadCategory = cat1
+
+            };
+
+
+            listCategory.Add(catLeadUser1);
+            listCategory.Add(catLeadUser2);
+            listCategory.Add(catLeadUser3);
+            listCategory.Add(catLeadUser4);
+            listCategory.Add(catLeadUser5);
+            listCategory.Add(catLeadUser6);
+            listCategory.Add(catLeadUser7);
+            listCategory.Add(catLeadUser8);
+
+            ApiData.LeadsUserDetail = listCategory;
+            return listCategory;
         }
     }
 }
