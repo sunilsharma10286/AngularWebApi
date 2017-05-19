@@ -59,7 +59,7 @@ namespace AngularWebApi.Controllers
         {
         }
 
-        //[HttpDelete]
+        //[HttpDelete] 
         // DELETE api/values/5
         public List<LeadUserDetail> DeleteLead(int id, int categoryId)
         {

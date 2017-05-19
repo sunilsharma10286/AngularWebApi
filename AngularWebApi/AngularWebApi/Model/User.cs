@@ -42,8 +42,8 @@ namespace AngularWebApi.Model
         public bool IsConfirm { get; set; }
         public bool IsActive { get; set; }
         public string Comment { get; set; }
-        public LeadCategory LeadCategory { get; set; }
         public bool IsPlanMonth { get; set; }
+        public LeadCategory LeadCategory { get; set; }
 
     }
 

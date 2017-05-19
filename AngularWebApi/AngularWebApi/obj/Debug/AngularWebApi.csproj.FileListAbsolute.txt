@@ -220,7 +220,6 @@ D:\Angular\latestAngularWebAPi\AngularWebApi\AngularWebApi\bin\zh-Hant\System.Sp
 D:\Angular\latestAngularWebAPi\AngularWebApi\AngularWebApi\obj\Debug\AngularWebApi.csprojResolveAssemblyReference.cache
 D:\Angular\latestAngularWebAPi\AngularWebApi\AngularWebApi\obj\Debug\AngularWebApi.dll
 D:\Angular\latestAngularWebAPi\AngularWebApi\AngularWebApi\obj\Debug\AngularWebApi.pdb
-D:\Projects\AngularWebApiGit\AngularWebApi\AngularWebApi\obj\Debug\AngularWebApi.csprojResolveAssemblyReference.cache
 D:\Projects\AngularWebApiGit\AngularWebApi\AngularWebApi\bin\AngularWebApi.dll.config
 D:\Projects\AngularWebApiGit\AngularWebApi\AngularWebApi\bin\AngularWebApi.dll
 D:\Projects\AngularWebApiGit\AngularWebApi\AngularWebApi\bin\AngularWebApi.pdb
