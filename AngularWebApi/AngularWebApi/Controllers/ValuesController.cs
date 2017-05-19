@@ -12,6 +12,7 @@ namespace AngularWebApi.Controllers
 {
     public class ValuesController : ApiController
     {
+
         // GET api/values
 
         static int milliseconds = 0;
