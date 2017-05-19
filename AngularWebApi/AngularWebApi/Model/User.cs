@@ -141,7 +141,8 @@ namespace AngularWebApi.Model
                 UserId = 1,
                 leadname = "facebook app",
                 Description = "facebook app detail",
-                planmonthdate = "2017-02-17",
+                planmonthdate = DateTime.Parse("2017-04-18"),
+                IsPlanMonth = true,
             };
             LeadUserDetail catLeadUser2 = new LeadUserDetail
             {
@@ -150,7 +151,8 @@ namespace AngularWebApi.Model
                 UserId = 1,
                 leadname = "test app",
                 Description = "test app detail",
-                planmonthdate = "2017-04-18",
+                planmonthdate = DateTime.Parse("2017-04-18"),
+                IsPlanMonth = true,
             };
             LeadUserDetail catLeadUser3 = new LeadUserDetail
             {
@@ -159,7 +161,8 @@ namespace AngularWebApi.Model
                 UserId = 1,
                 leadname = "google app",
                 Description = "google app detail",
-                planmonthdate = "2017-06-19",
+                planmonthdate = DateTime.Parse("2017-06-19"),
+                IsPlanMonth = false,
             };
             LeadUserDetail catLeadUser4 = new LeadUserDetail
             {
@@ -168,7 +171,8 @@ namespace AngularWebApi.Model
                 UserId = 1,
                 leadname = "span app",
                 Description = "span app detail",
-                planmonthdate = "2017-01-20",
+                planmonthdate = DateTime.Parse("2017-01-20"),
+                IsPlanMonth = true,
             };
             LeadUserDetail catLeadUser5 = new LeadUserDetail
             {
@@ -177,7 +181,8 @@ namespace AngularWebApi.Model
                 UserId = 1,
                 leadname = "evry app",
                 Description = "evry app detail",
-                planmonthdate = "2017-04-10",
+                planmonthdate = DateTime.Parse("2017-04-10"),
+                IsPlanMonth = true,
             };
             LeadUserDetail catLeadUser6 = new LeadUserDetail
             {
@@ -186,8 +191,9 @@ namespace AngularWebApi.Model
                 UserId = 1,
                 leadname = "yahoo app",
                 Description = "yahoo app detail",
-                planmonthdate = "2017-08-09",
+                planmonthdate = DateTime.Parse("2017-08-09"),
 
+                IsPlanMonth = false,
             };
             LeadUserDetail catLeadUser7 = new LeadUserDetail
             {
@@ -196,7 +202,8 @@ namespace AngularWebApi.Model
                 UserId = 1,
                 leadname = "evry app",
                 Description = "evry app detail",
-                planmonthdate = "2017-06-12",
+                planmonthdate = DateTime.Parse("2017-06-12"),
+                IsPlanMonth = true,
             };
             LeadUserDetail catLeadUser8 = new LeadUserDetail
             {
@@ -205,7 +212,8 @@ namespace AngularWebApi.Model
                 UserId = 1,
                 leadname = "yahoo app",
                 Description = "yahoo app detail",
-                planmonthdate = "2017-12-17",
+                planmonthdate = DateTime.Parse("2017-12-17"),
+                IsPlanMonth = false,
             };
             LeadUserDetail catLeadUser9 = new LeadUserDetail
             {
@@ -214,7 +222,8 @@ namespace AngularWebApi.Model
                 UserId = 1,
                 leadname = "evry app",
                 Description = "evry app detail",
-                planmonthdate = "2017-03-13",
+                planmonthdate = DateTime.Parse("2017-03-13"),
+                IsPlanMonth = true,
             };
             LeadUserDetail catLeadUser10 = new LeadUserDetail
             {
@@ -223,7 +232,8 @@ namespace AngularWebApi.Model
                 UserId = 1,
                 leadname = "yahoo app",
                 Description = "yahoo app detail",
-                planmonthdate = "2017-05-15",
+                planmonthdate = DateTime.Parse("2017-05-15"),
+                IsPlanMonth = true,
             };
             listUserCategory.Add(catLeadUser1);
             listUserCategory.Add(catLeadUser2);
